@@ -1,0 +1,58 @@
+/*@plugin “daisy/theme”{
+  name :"mytheme";
+  default:true;
+  prefersdark:false;
+  color-scheme:light;
+  --color-primary:#888887;
+}
+
+
+/* Reset 基本樣式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c4cee8 !important; /* 確保顯示背景 */
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+/* 確保 .image-container 可以正常顯示圖片 */
+.image-container {
+  display: flex;
+  justify-content: center; /* 讓圖片置中 */
+  align-items: center;
+  gap: 20px; /* 控制圖片之間的間距 */
+  margin-top: 20px;
+  flex-wrap: wrap; /* 確保畫面變小時可以換行 */
+}
+
+/* 強制讓 Imgcard 內的 img 繼承 CSS */
+.imgcard img {
+  width: 150px !important;  /* 設定圖片寬度 */
+  height: 200px !important; /* 設定圖片高度 */
+  object-fit: cover; /* 確保圖片不變形 */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* 讓圖片懸停時放大 */
+.imgcard img:hover {
+  transform: scale(1.05);
+}
+
+/* 調整 Footer */
+.footer {
+  background-color: #4a90e2;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+}
+
